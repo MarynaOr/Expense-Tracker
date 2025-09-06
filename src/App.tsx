@@ -1,16 +1,27 @@
-function App() {
+import { Route, Routes } from 'react-router-dom';
+// import Home from './pages/Home';
+// import About from './components/About';
+import HomePage from './components/HomePage';
+import React, { lazy, Suspense, type FC } from 'react';
+
+// interface HomeProps{
+//   title:string,
+// }
+
+const Home = lazy(() => import('./pages/Home'));
+
+const App: FC = () => {
   return (
-    <div> <h1>Lorem</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Quos vel repellendus culpa
-      recusandae corporis facilis. Fugit sunt
-      rerum facilis cupiditate, ad mollitia nihil
-      doloribus et magnam dicta provident atque
-      placeat?
-    </p></div>
-   
+    <Suspense fallback={<div>Loading...</div>}>
+      <header>
+        <HomePage />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/about" element={<About />} /> */}
+        </Routes>
+      </header>
+    </Suspense>
   );
-}
+};
 
 export default App;

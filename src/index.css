@@ -1,14 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  font: bold;
+  font-weight: bold;
   font-size: 18px;
   font-family: sans-serif;
-  line-height: 117%;
   letter-spacing: 0.03em;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
   padding: 0 24px;
 
   background-color: #5900ff18;

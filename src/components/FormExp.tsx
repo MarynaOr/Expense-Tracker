@@ -12,7 +12,7 @@ const FormExp = () => {
   };
 
   return (
-    <div className="flex justify-center top-14 gap-16 p-4">
+    <div className="flex gap-12">
       <h3>Add New Expense</h3>
 
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>

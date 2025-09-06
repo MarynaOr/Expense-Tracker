@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 // import Home from './pages/Home';
 // import About from './components/About';
 import HomePage from './components/HomePage';
-import React, { lazy, Suspense, type FC } from 'react';
+import { lazy, Suspense, type FC } from 'react';
 
 // interface HomeProps{
 //   title:string,

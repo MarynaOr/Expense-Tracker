@@ -4,7 +4,16 @@ const DropMenu = () => {
   return (
     <div>
       <label htmlFor="as">
-        <Field as="select" id="as" placeholder="select" name="as">
+        <Field
+          as="select"
+          id="as"
+          placeholder="select"
+          name="as"
+          required
+        >
+          <option value="" disabled>
+            Оберіть опцію
+          </option>
           <option>🥘 Food & Drinks (їжа, кафе, супермаркет)</option>
           <option>
             🏠 Housing & Utilities (оренда, комунальні, інтернет)
@@ -23,7 +32,6 @@ const DropMenu = () => {
           <option>📂 Other (все інше)</option>
         </Field>
       </label>
-      <button>Add</button>
     </div>
   );
 };

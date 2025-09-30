@@ -1,5 +1,12 @@
-import { Field, Form, Formik, type FormikValues } from 'formik';
+import { Field, Form, Formik, type FormikHelpers } from 'formik';
 import DropMenu from './DropMenu';
+import { useState } from 'react';
+
+interface MyFprmValues {
+  name: string;
+  as: string;
+  amount: string;
+}
 
 const initialValues = {
   name: '',
@@ -7,8 +14,16 @@ const initialValues = {
   amount: '',
 };
 const FormExp = () => {
-  const handleSubmit = (values: FormikValues) => {
-    console.log('Form data:', values);
+  const [expense, setExpense] = useState<MyFprmValues[]>([]);
+
+  const handleSubmit = (
+    values: MyFprmValues,
+    { resetForm }: FormikHelpers<MyFprmValues>,
+  ) => {
+    setExpense([...expense, values]);
+    console.log(values);
+
+    resetForm();
   };
 
   return (
@@ -26,8 +41,18 @@ const FormExp = () => {
           <label htmlFor="amount">
             <Field id="amount" name="amount" placeholder="Amount" />
           </label>
+          <button type="submit">Add</button>
         </Form>
       </Formik>
+
+      <div>
+        {expense.map((exp, index) => (
+          <li key={index}>
+            {/* {`${exp.name} - ${exp.as} - ${exp.amount}`} */}
+            {exp.name} - {exp.as} -{exp.amount}
+          </li>
+        ))}
+      </div>
     </div>
   );
 };

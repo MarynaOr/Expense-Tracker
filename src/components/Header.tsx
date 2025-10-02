@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-const HomePage = () => {
+const Header = () => {
   const styleActive = ({ isActive }: { isActive: boolean }) => ({
     color: isActive ? '#007017' : 'black',
   });
@@ -10,9 +10,9 @@ const HomePage = () => {
       <NavLink to="/" style={styleActive}>
         <p>Home</p>
       </NavLink>
-      {/* <NavLink to="/register" style={styleActive}>
+      <NavLink to="/register" style={styleActive}>
         <p> </p>
-      </NavLink> */}
+      </NavLink>
       {/* <NavLink to="/about" style={styleActive}>
         <h1>about</h1>
       </NavLink> */}
@@ -20,4 +20,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Header;

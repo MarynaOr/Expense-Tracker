@@ -28,7 +28,7 @@ const FormExp = () => {
 
   return (
     <div className="flex gap-12">
-      <h3>Add New Expense</h3>
+      <h3>Add New Expenses</h3>
 
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form>

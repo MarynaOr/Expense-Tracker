@@ -1,10 +1,10 @@
-import FormExp from '../components/FormExp';
+import Main from './Main';
 
 const Home = () => {
   return (
     <div>
       <h1>Expenses</h1>
-      <FormExp />
+      <Main />
     </div>
   );
 };

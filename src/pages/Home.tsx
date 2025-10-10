@@ -1,10 +1,10 @@
-import Main from './Main';
+import ExpenseList from '../components/ExpenseList';
 
 const Home = () => {
   return (
     <div>
       <h1>Expenses</h1>
-      <Main />
+      <ExpenseList />
     </div>
   );
 };

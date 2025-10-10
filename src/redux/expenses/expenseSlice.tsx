@@ -1,6 +1,7 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 export interface Expense {
   id: string;
+  // type: string;
   description: string;
   amount: number;
   date: string;

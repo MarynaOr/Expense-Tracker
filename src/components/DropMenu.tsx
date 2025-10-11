@@ -6,30 +6,40 @@ const DropMenu = () => {
       <label htmlFor="as">
         <Field
           as="select"
-          id="as"
+          id="category-select"
           placeholder="select"
-          name="as"
+          name="category"
           required
         >
           <option value="" disabled>
             Оберіть опцію
           </option>
-          <option>🥘 Food & Drinks (їжа, кафе, супермаркет)</option>
-          <option>
+          <option value="Food & Drinks">
+            🥘 Food & Drinks (їжа, кафе, супермаркет)
+          </option>
+          <option value="Housing & Utilities">
             🏠 Housing & Utilities (оренда, комунальні, інтернет)
           </option>
-          <option>🚗 Transport (пальне, проїзд, таксі)</option>
+          <option value="Transport">
+            🚗 Transport (пальне, проїзд, таксі)
+          </option>
           <option>
             ❤️ Health & Fitness (аптека, лікар, спортзал)
           </option>
-          <option>🎉 Entertainment (кіно, ігри, підписки)</option>
-          <option>🛒 Shopping (одяг, техніка, покупки)</option>
-          <option>📚 Education (курси, книги, навчання)</option>
-          <option>
+          <option value="Entertainment">
+            🎉 Entertainment (кіно, ігри, підписки)
+          </option>
+          <option value="Shopping">
+            🛒 Shopping (одяг, техніка, покупки)
+          </option>
+          <option value="Education">
+            📚 Education (курси, книги, навчання)
+          </option>
+          <option value="Loan / Credit Payments">
             💳 Loan / Credit Payments (погашення кредитів, банківські
             платежі)
           </option>
-          <option>📂 Other (все інше)</option>
+          <option value="Other">📂 Other (все інше)</option>
         </Field>
       </label>
     </div>

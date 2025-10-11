@@ -1,11 +1,18 @@
-import { type Expense } from '../redux/expenses/expenseSlice';
+import { useDispatch } from 'react-redux';
+import {
+  deleteExpense,
+  type Expense,
+} from '../redux/expenses/expenseSlice';
 
 const Expenses = ({
+  id,
   category,
   description,
   amount,
   date,
 }: Expense) => {
+  const dispatch = useDispatch();
+
   return (
     <>
       <div>
@@ -15,7 +22,9 @@ const Expenses = ({
         <p> {category} </p>
         <p>Date: {date} </p>
 
-        <button>Видалити</button>
+        <button onClick={() => dispatch(deleteExpense(id))}>
+          Видалити
+        </button>
       </div>
     </>
   );

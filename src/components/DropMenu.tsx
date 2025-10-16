@@ -23,7 +23,7 @@ const DropMenu = () => {
           <option value="Transport">
             🚗 Transport (пальне, проїзд, таксі)
           </option>
-          <option>
+          <option value="Health & Fitness">
             ❤️ Health & Fitness (аптека, лікар, спортзал)
           </option>
           <option value="Entertainment">

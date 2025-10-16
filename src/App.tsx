@@ -9,7 +9,7 @@ import { lazy, Suspense, type FC } from 'react';
 // }
 
 const Home = lazy(() => import('./pages/Home'));
-
+const StatisticPage = lazy(() => import('./pages/StatisticPage'));
 const App: FC = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -18,6 +18,11 @@ const App: FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           {/* <Route path="/about" element={<About />} /> */}
+
+          <Route
+            path="/statistic"
+            element={<StatisticPage />}
+          ></Route>
         </Routes>
       </header>
     </Suspense>

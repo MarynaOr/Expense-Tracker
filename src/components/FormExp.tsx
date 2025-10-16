@@ -55,7 +55,7 @@ const FormExp = () => {
           <label htmlFor="amount">
             <Field id="amount" name="amount" placeholder="Amount" />
           </label>
-          <button type="submit">Add</button>
+          <button type="submit">Додати</button>
         </Form>
       </Formik>
     </div>

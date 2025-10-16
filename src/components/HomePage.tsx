@@ -10,6 +10,13 @@ const HomePage = () => {
       <NavLink to="/" style={styleActive}>
         <p>Home</p>
       </NavLink>
+      <NavLink to="/statistic" style={styleActive}>
+        <p>Statistic</p>
+      </NavLink>
+
+      <NavLink to="/register" style={styleActive}>
+        {/* <p>register </p> */}
+      </NavLink>
       {/* <NavLink to="/register" style={styleActive}>
         <p> </p>
       </NavLink> */}
